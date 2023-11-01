@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario para Google Sheets</title>
+</head>
+<body>
+  <form id="myForm" action="https://script.google.com/macros/s/AKfycbwiTbqBy0m1NUbniVvNmCfOHX1nu4-1z5vk7S8xH4iJtQaNjkBf4BEfBYSO6Ah_dgtURQ/exec" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <input type="button" value="Enviar" onclick="submitForm()">
+  </form>
+
+  <script>
+    function submitForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+
+      var data = {
+        name: name,
+        email: email
+      };
+
+      google.script.run.doPost(data);
+    }
+  </script>
+</body>
+</html>
