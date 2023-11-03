@@ -1,31 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Formulario para Google Sheets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600;700&family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="officialprofes.css">
+    <title>Formulario</title>
 </head>
 <body>
-  <form id="myForm" action="https://script.google.com/macros/s/AKfycbwiTbqBy0m1NUbniVvNmCfOHX1nu4-1z5vk7S8xH4iJtQaNjkBf4BEfBYSO6Ah_dgtURQ/exec" method="post">
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name"><br>
+    <div class="container-form">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Por favor llene el formulario para unirte a nuestra comunidad</p>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Formulario de inscripción</h2>
+                <form class="form" method="post" action="" name="contact-form">
+                    <label>
+                        <i class='bx bxl-gmail' ></i>
+                        <input type="email" name="Dirección de correo electrónico" id="mensaje0" placeholder="Correo electronico">
+                    </label>
+                    <label >
+                        <i class='bx bx-user'></i>
+                        <input type="text" name="Nombres y Apellidos" id="mensaje1" placeholder="Nombres y apellidos"> <br>
+                    </label>
+                    <label>
+                        <input type="text" name="País" id="mensaje2" placeholder="País"> 
+                        <input type="text" name="Ciudad" id="mensaje3" placeholder="Ciudad"> <br>
+                    </label>
+                    <label >
+                        <i class='bx bxs-graduation'></i>
+                        <input type="text" name="Carrera profesional" id="mensaje4" placeholder="Carrera profesional"> <br>
+                        <input type="text" name="DNI" id="mensaje5" placeholder="DNI"> <br>
+                    </label>
+                    <p>Centro laboral</p>
+                    <label for="alt" class="alterna1">
+                        <input type="radio" name="Centro de estudios/Laboral" id="mensaje6" >Universidad<br>
+                        <input type="radio" name="Centro de estudios/Laboral" id="mensaje6">Instituto<br>
+                        <input type="radio" name="Centro de estudios/Laboral" id="mensaje6">Empresa<br>
+                        <input type="radio" name="Centro de estudios/Laboral" id="mensaje6">Otro<br>
+                    </label>
+                    <label >
+                        <i class='bx bxs-institution'></i>
+                        <input type="text" name="Especificar la Universidad/Insituto/Empresa" id="mensaje7" placeholder="Universidad/Instituto/empresa">
+                    </label>
+                    <label >
+                        <i class='bx bxs-hard-hat' ></i>
+                        <input type="text" name="Cargo ocupado en la Institución" id="mensaje8" placeholder="Cargo que ocupa"> <br>
+                    </label>
+                    <p>Mediante que red social te enteraste del congreso</p>
+                    <label for="alt" class="alterna">
+                        <input type="radio" name="Mediante que red social te enteraste del congreso" id="mensaje9" > <i class='bx bxl-facebook-circle'></i> <br>
+                        <input type="radio" name="Mediante que red social te enteraste del congreso" id="mensaje9" ><i class='bx bxl-tiktok' ></i> <br>
+                        <input type="radio" name="Mediante que red social te enteraste del congreso" id="mensaje9" ><i class='bx bxl-instagram-alt' ></i> <br>
+                        <input type="radio" name="Mediante que red social te enteraste del congreso" id="mensaje9" ><i class='bx bxl-linkedin-square' ></i> <br>
+                        <input type="radio" name="Mediante que red social te enteraste del congreso" id="mensaje9" > Otro <br>
+                    </label>
 
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email"><br>
-
-    <input type="button" value="Enviar" onclick="submitForm()">
-  </form>
-
-  <script>
-    function submitForm() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-
-      var data = {
-        name: name,
-        email: email
-      };
-
-      google.script.run.doPost(data);
-    }
-  </script>
+                    <input type="submit" value="Registro">
+                </form>               
+            </div>
+            <script src="html_a_python.js"></script>
+            <script src="envio.js"></script>
+        </div>
+        
+    </div>
+    
+    
 </body>
 </html>
