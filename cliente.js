@@ -1,4 +1,5 @@
-var socket = new WebSocket("ws://localhost:8768");
+var socket = new WebSocket("ws://localhost:8769");
+var mensajes = [];
 
 socket.onopen = function(event) {
     console.log("Conexión WebSocket abierta");
@@ -20,15 +21,15 @@ socket.onerror = function(error) {
     console.error("Error en la conexión WebSocket: " + error.message);
 };
 
-function enviarMensaje(event, index) {
-    var inputElement = document.getElementById("mensaje" + index);
-    
-    if (event.keyCode === 13 || inputElement.value.trim() !== "") {
-        // Verificar si se presionó "Enter" o se cambió el input
-        var mensajes = [];
-        for (var i = 0; i < 10; i++) {
-            mensajes.push(document.getElementById("mensaje" + i).value);
-        }
-        socket.send(JSON.stringify(mensajes));
-    }
+// Agrega un controlador de eventos "blur" a cada campo de entrada
+var inputElements = document.querySelectorAll('input[type="text"]');
+inputElements.forEach(function(inputElement, index) {
+    inputElement.addEventListener('blur', function(event) {
+        enviarMensaje(inputElement, index);
+    });
+});
+
+function enviarMensaje(inputElement, index) {
+    mensajes[index] = inputElement.value;
+    socket.send(JSON.stringify(mensajes));
 }
