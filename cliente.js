@@ -1,4 +1,4 @@
-var socket = new WebSocket("ws://localhost:8770");
+var socket = new WebSocket("ws://localhost:8771");
 var mensajes = {};
 
 socket.onopen = function(event) {
