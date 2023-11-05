@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzN5MwE3TFc8a5IuYHKpsIAtcSCLQlKmg4Cn7PedWf-mqJu2rtDXtkcaTOHwBkzBlD4iA/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwSPagtdsZRJWkLZwwkJAiHmrk41mjEe3wWrBncFoVImE3qLXoP41VF9iGfIY57el6mYg/exec'
 
 const form = document.forms['contact-form']
 
