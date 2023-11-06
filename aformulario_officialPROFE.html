@@ -21,7 +21,7 @@
         <div class="form-information">
             <div class="form-information-childs">
                 <h2>Formulario de inscripción</h2>
-                <form id="inputs" class="form" method="post" action="https://script.google.com/macros/s/AKfycbxVaZsRatyAE1fl5_fNCf6uclhP2wg2tArgqcaJkJdYIPL7A2vaN0Ihz_nfpMOcrPPRKw/exec" name="contact-form">
+                <form id="inputs" class="form" method="post" action="" name="contact-form" onsubmit="enviarFormulario(event)">
                     <label>
                         <i class='bx bxl-gmail' ></i>
                         <input type="email" name="Dirección de correo electrónico" id="mensaje0" placeholder="Correo electronico">
@@ -63,7 +63,7 @@
                         <input type="radio" name="Mediante que red social te enteraste del congreso" id="mensaje9" > Otro <br>
                     </label>
 
-                    <input type="submit" value="Registro">
+                    <input type="submit" id="submitButton" value="Registro">
                 </form> 
                 
             </div>
