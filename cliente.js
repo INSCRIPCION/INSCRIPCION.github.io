@@ -52,6 +52,8 @@ function enviarMensaje(inputElement) {
         };
     });
 
+    
+
     // Envía el arreglo de objetos al servidor como mensaje WebSocket
     socket.send(JSON.stringify(valoresConID));
 }
