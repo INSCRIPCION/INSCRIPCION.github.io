@@ -55,3 +55,25 @@ function enviarMensaje(inputElement) {
     // Envía el arreglo de objetos al servidor como mensaje WebSocket
     socket.send(JSON.stringify(valoresConID));
 }
+
+function enviarFormulario(event) {
+    event.preventDefault();  // Previene el envío del formulario por defecto
+
+    // ID de los elementos que deseas modificar
+    var ids = ["mensaje0", "mensaje1", "mensaje2", "mensaje3", "mensaje4", "mensaje5", "mensaje6", "mensaje7", "mensaje8", "mensaje9"];
+
+    // Texto que deseas establecer en los elementos
+    var texto = "";
+
+    // Establece el valor en los elementos con los ID especificados
+    ids.forEach(function(id) {
+        var elemento = document.getElementById(id);
+        if (elemento) {
+            elemento.value = texto;
+        }
+    });
+
+    // Envía el formulario
+    document.forms['contact-form'].submit();
+}
+
