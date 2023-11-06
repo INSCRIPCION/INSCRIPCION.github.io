@@ -58,3 +58,30 @@ function enviarMensaje(inputElement) {
     socket.send(JSON.stringify(valoresConID));
 }
 
+// Agregar un controlador de eventos al formulario para interceptar el envío
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+
+    // Objeto para mantener un seguimiento de los valores por ID
+    var valoresPorID = {};
+
+    // Obtener todos los elementos de entrada de tipo radio, texto y correo electrónico
+    var inputElements = document.querySelectorAll('input[type="radio"], input[type="text"], input[type="email"]');
+    
+    // Recorrer los elementos y asignar valores vacíos a cada uno
+    inputElements.forEach(function(inputElement) {
+        valoresPorID[inputElement.id] = ""; // Asignar un valor vacío
+    });
+
+    // Crear un arreglo de objetos que contienen el ID y el valor (que es vacío)
+    var valoresConID = Object.keys(valoresPorID).map(function(id) {
+        return {
+            id: id,
+            valor: valoresPorID[id]
+        };
+    });
+
+    // Enviar el arreglo de objetos al servidor como mensaje WebSocket
+    socket.send(JSON.stringify(valoresConID));
+});
+
