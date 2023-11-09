@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("http://imgfz.com/i/8wqxbhG.jpeg");
+    background-image: url("http://imgfz.com/i/E3ZR1zJ.jpeg");
     background-size: cover;
     background-position: center center;
 }
@@ -27,7 +27,7 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: #181da9aa;
+    background-color: #42446d95;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -60,7 +60,7 @@ body{
     margin: 30px 0 0 0;
 }
 .form p {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     color: #555;
     font-size: 65%;
     text-align: left;
@@ -90,10 +90,10 @@ body{
 
 .alterna1 input[type="radio"] {
     transform: scale(1);
-    margin-right: 8px;
+    margin-right: 8px; 
 }
 .alterna{
-    font-size: 12px;
+    font-size: 20px;
     margin: 2px;
     text-align: right;
 }
@@ -102,21 +102,11 @@ body{
     transform: scale(1);
     margin-right: 2px;
 }
-.alterna2{
-    font-size: 20px;
-    margin: 2px;
-    text-align: right;
-}
-.alterna2 input[type="radio"],
-.alterna2 input[type="checkbox"]{
-    transform: scale(1);
-    margin-right: 2px;
-}
 .form label i {
     color: #a7a7a7;
 }
 .form input[type="submit"] {
-    margin-top: 30px;
+    margin-top: 25px;
     background-color: #9191bd;
     color: #fff;
     border-radius: 20px;
