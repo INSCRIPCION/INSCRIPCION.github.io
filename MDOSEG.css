@@ -3,8 +3,22 @@
     padding:0;
     font-family: 'Montserrat', sans-serif;
 }
+header{
+    width: 100%;
+    height: 20vh;
+    background-image: url('http://imgfz.com/i/5rUGNmL.jpeg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+header p{
+    position: absolute;
+    bottom: 0%; /* Ajusta este valor según sea necesario para tu diseño */
+    margin: 0;
+    padding: 10px; /* Añade un poco de espacio alrededor del texto si lo deseas */
+    color: white; /* Ajusta el color del texto según tu diseño */
+}
 body {
-    display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
@@ -66,18 +80,33 @@ body {
     text-align: center;
     margin-top: 20px;
 }
-.container .card .imgBx {
+.container .card .imgBx1 {
     position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 260px;
+    top: -70px;
+    left: 0px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,5);
+}
+.container .card .imgBx1 img {
+   width: 100%;
+    border-radius: 4px;
+}
+.container .card .imgBx2 {
+    position: relative;s
     justify-content: center;
     align-items: center;
     width: 260px;
     height: 260px;
-    top: -60px;
-    left: 20px;
+    top: -80px;
+    left: 0px;
     z-index: 1;
     box-shadow: 0 5px 20px rgba(0,0,0,0,5);
 }
-.container .card .imgBx img {
+.container .card .imgBx2 img {
     max-width: 100%;
     border-radius: 4px;
 }
