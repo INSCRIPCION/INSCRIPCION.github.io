@@ -121,6 +121,25 @@
     </div>
 
     <script>
+        const input1 = document.getElementById('correoUsuario');
+        const input2 = document.getElementById('selectDominio');
+        const resultado = document.getElementById('resultado');
+
+        input1.addEventListener('input', concatenarInputs);
+        input2.addEventListener('input', concatenarInputs);
+
+        function concatenarInputs() {
+          const valorInput1 = input1.value || '';
+          const valorInput2 = input2.value || '';
+
+          const concatenacion = valorInput1 +"@"+ valorInput2;
+
+          resultado.value = concatenacion;
+        }
+        concatenarInputs();
+    </script>
+    
+    <script>
         var tipoCentro = document.getElementById('tipoCentro');
         var selectCentro = document.getElementById('selectCentro');
         var universidadesList = document.querySelector('.Unilist');
