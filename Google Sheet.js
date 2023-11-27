@@ -3,8 +3,8 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbz8KDJd93LxQ0Qg8JMxkx
 const form = document.forms['contact-form']
 
 form.addEventListener('submit', e => {
-  e.preventDefault()
+  e.preventDefault();
+  window.location.href = 'index.html';
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(() => { window.location.href = 'index.html'; })
   .catch(error => console.error('Error!', error.message))
 })
