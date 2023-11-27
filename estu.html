@@ -24,7 +24,7 @@
                 <form class="form" method="post" action="" name="contact-form">
                     <label>
                         <i class='bx bxl-gmail' ></i>
-                        <input type="text" name="DIRECCION DE CORREO ELECTRONICO" id="correoUsuario" placeholder="Correo electrónico">
+                        <input type="text" name="" id="correoUsuario" placeholder="Correo electrónico">
                         <span>@</span>
                         <input list="dominioList" name="Domini" id="selectDominio" placeholder="Seleccionar o escribir">
                         <datalist id="dominioList">
@@ -35,6 +35,7 @@
                             <option value="outlook.com">
                         </datalist>
                     </label>
+                    <input type="text" name="DIRECCION DE CORREO ELECTRONICO">
                     <label >
                         <i class='bx bx-user'></i>
                         <input type="text" name="NOMBRES" placeholder="Nombres">
@@ -133,6 +134,25 @@
         </div>
     </div>
 
+    <script>
+        const input1 = document.getElementById('correoUsuario');
+        const input2 = document.getElementById('selectDominio');
+        const resultado = document.getElementById('resultado');
+
+        input1.addEventListener('input', concatenarInputs);
+        input2.addEventListener('input', concatenarInputs);
+
+        function concatenarInputs() {
+          const valorInput1 = input1.value || '';
+          const valorInput2 = input2.value || '';
+
+          const concatenacion = valorInput1 +"@"+ valorInput2;
+
+          resultado.value = concatenacion;
+        }
+        concatenarInputs();
+    </script>
+    
     <script>
         var tipoCentro = document.getElementById('tipoCentro');
         var selectCentro = document.getElementById('selectCentro');
