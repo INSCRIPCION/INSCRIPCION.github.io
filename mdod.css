@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 29.5vh;
+    background-image: url('http://imgfz.com/i/edMYopT.jpeg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header p {
+    position: absolute;
+    bottom: 0%;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("http://imgfz.com/i/0k41eSN.jpeg");
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.container .card {
+    display: flex;
+    align-items: center;
+    max-width: 45%;
+    background-color: #fff;
+    margin: 30px 2.5%;
+    padding: 20px 15px;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 5);
+    transition: 0.3s ease-in-out;
+    max-width: 300px;
+    height: 200px;
+}
+
+.container .card h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container .card .ingresar-link {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    background: #007bff;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+.container .card .ingresar-link:hover {
+    background: #0056b3;
+    transition: 0.3s;
+    display: none;
+}
+
+.container .card:hover {
+    height: 340px;
+}
+
+.container .card:hover .ingresar-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .card .imgBx2,
+.container .card .imgBx3 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 260px;
+    top: -70px;
+    left: 0px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 5);
+}
+
+.container .card .imgBx1 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 65%; /* Cambiado de 10% a 100% para ocupar todo el ancho del cajetín */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+    top: -70px;
+    left: 0px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 5);
+}
+
+.container .card .imgBx1 img,
+.container .card .imgBx2 img,
+.container .card .imgBx3 img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -80px;
+    transition-delay: 0.3s;
+}
