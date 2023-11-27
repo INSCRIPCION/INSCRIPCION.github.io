@@ -35,14 +35,15 @@
                             <option value="outlook.com">
                         </datalist>
                     </label>
+                    <input type="text" name="DIRECCION DE CORREO ELECTRONICO" id="resultado" style="display: none;">
                     <label >
                         <i class='bx bx-user'></i>
-                        <input type="text" name="Name" placeholder="Nombres">
-                        <input type="text" name="last_name" placeholder="Apellidos">
-                        <select name="Sexo">
+                        <input type="text" name="NOMBRES" placeholder="Nombres">
+                        <input type="text" name="APELLIDOS" placeholder="Apellidos">
+                        <select name="GENERO">
                             <option value="" selected disabled>Sexo</option>
-                            <option value="Masculino">M</option>
-                            <option value="Femenino">F</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
                             
                         </select>
                     </label>
@@ -50,7 +51,7 @@
                     <label>
                         <i class='bx bx-world'></i>
                         <div class="Selec-pa">
-                            <input type="text" name="País" id="selectPais" list="paisesList" placeholder="País">
+                            <input type="text" name="PAIS" id="selectPais" list="paisesList" placeholder="País">
                             <datalist id="paisesList">
                                 <option value="Perú">
                                 <option value="España">
@@ -59,7 +60,7 @@
                         </div>
 
                         <div class="select-ci">
-                            <input type="text" name="Ciudad" id="selectCiudad" list="ciudadList" placeholder="Ciudad">
+                            <input type="text" name="CIUDAD" id="selectCiudad" list="ciudadList" placeholder="Ciudad">
                             <datalist id="ciudadList">
                                 <option value="Tacna">
                                 <option value="Arequipa">
@@ -75,14 +76,14 @@
 
                     <label class="alterna1">
                         <i class='bx bxs-institution'></i>
-                        <select id="tipoCentro" name="tipoCentro">
+                        <select id="tipoCentro" name="CENTRO DE ESTUDIOS/LABORAL">
                             <option value="" selected disabled>Centro de estudios</option>
                             <option value="universidad">Universidad</option>
                             <option value="instituto">Instituto</option>
                         </select>
 
                         <div class="custom-select">
-                            <input type="text" name="Centro de estudios/Laboral" id="selectCentro" list="centroList" placeholder="Seleccione o escriba su centro de estudios">
+                            <input type="text" name="ESPECIFICAR LA UNIVERSIDAD/INSTITUTO/EMPRESA" id="selectCentro" list="centroList" placeholder="Seleccione o escriba su centro de estudios">
                             <datalist id="Unilist" class="universidades-list">
                                 <!-- Opciones universitarias -->
                                 <option value="Universidad Nacional Jorge Basadre Grohmann"></option>
@@ -102,7 +103,7 @@
                     
                     <label>
                         <i class='bx bxs-institution'></i>
-                        <input list="carreraList" name="Carrera" id="selectCarrera" placeholder="Seleccione su carrera">
+                        <input list="carreraList" name="CARRERA PROFESIONAL" id="selectCarrera" placeholder="Seleccione su carrera">
                         <datalist id="carreraList">
                             <option value="Ingeneria Metalurgica">
                             <option value="Ingeneria de minas">
