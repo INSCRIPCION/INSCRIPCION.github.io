@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600;700&family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="forstud.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container-form">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Por favor llene el formulario para unirte a nuestra comunidad</p>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Formulario de inscripción</h2>
+                <form class="form" method="post" action="" name="contact-form">
+                    <label>
+                        <i class='bx bxl-gmail' ></i>
+                        <input type="text" name="CorreoUsuario" id="correoUsuario" placeholder="Correo electrónico">
+                        <span>@</span>
+                        <input list="dominioList" name="Dominio" id="selectDominio" placeholder="Seleccionar o escribir">
+                        <datalist id="dominioList">
+                            <option value="gmail.com">
+                            <option value="hotmail.com">
+                            <option value="unjbg.edu.pe">
+                            <option value="yahoo.com">
+                            <option value="outlook.com">
+                        </datalist>
+                    </label>
+                    <label >
+                        <i class='bx bx-user'></i>
+                        <input type="text" name="Name" placeholder="Nombres">
+                        <input type="text" name="last_name" placeholder="Apellidos">
+                        <select name="Sexo">
+                            <option value="" selected disabled>Sexo</option>
+                            <option value="Masculino">M</option>
+                            <option value="Femenino">F</option>
+                            
+                        </select>
+                    </label>
+                    
+                    <label>
+                        <i class='bx bx-world'></i>
+                        <div class="Selec-pa">
+                            <input type="text" name="País" id="selectPais" list="paisesList" placeholder="País">
+                            <datalist id="paisesList">
+                                <option value="Perú">
+                                <option value="España">
+                                <option value="México">
+                            </datalist>
+                        </div>
+
+                        <div class="select-ci">
+                            <input type="text" name="Ciudad" id="selectCiudad" list="ciudadList" placeholder="Ciudad">
+                            <datalist id="ciudadList">
+                                <option value="Tacna">
+                                <option value="Arequipa">
+                                <option value="Puno">
+                                <option value="Cuzco">
+                                <option value="Lima">
+                            </datalist>
+                        </div>
+                        <input type="text" name="DNI" placeholder="DNI"> <br>              
+                    </label>
+                    <p>Centro de estudios</p>
+
+
+                    <label class="alterna1">
+                        <i class='bx bxs-institution'></i>
+                        <select id="tipoCentro" name="tipoCentro">
+                            <option value="" selected disabled>Centro de estudios</option>
+                            <option value="universidad">Universidad</option>
+                            <option value="instituto">Instituto</option>
+                        </select>
+
+                        <div class="custom-select">
+                            <input type="text" name="Centro de estudios/Laboral" id="selectCentro" list="centroList" placeholder="Seleccione o escriba su centro de estudios">
+                            <datalist id="Unilist" class="universidades-list">
+                                <!-- Opciones universitarias -->
+                                <option value="Universidad Nacional Jorge Basadre Grohmann"></option>
+                                <option value="U. Privada de Tacna"></option>
+                                <option value="U. Nacional de San Antonio Abad del Cusco"></option>
+                                <option value="U. Nacional del Altiplano Puno"></option>
+                                <!-- Agrega más opciones universitarias según sea necesario -->
+                            </datalist>
+                            <datalist id="Instlist" class="institutos-list">
+                                <!-- Opciones de institutos -->
+                                <option value="Senati"></option>
+                                <option value="Instituto 2"></option>
+                                <!-- Agrega más opciones de institutos según sea necesario -->
+                            </datalist>
+                        </div>
+                    </label>
+                    
+                    <label>
+                        <i class='bx bxs-institution'></i>
+                        <input list="carreraList" name="Carrera" id="selectCarrera" placeholder="Seleccione su carrera">
+                        <datalist id="carreraList">
+                            <option value="Ingeneria Metalurgica">
+                            <option value="Ingeneria de minas">
+                            <option value="Ingeneria ambiental">
+                            <option value="Ingeneria de sistemas">
+                            <!-- Agrega más opciones según sea necesario -->
+                        </datalist>
+                        
+                    </label>
+                    
+                    <input type="submit" value="Registro">
+                </form>
+            </div>
+            <script src="envio.js"></script>
+        </div>
+    </div>
+
+    <script>
+        var tipoCentro = document.getElementById('tipoCentro');
+        var selectCentro = document.getElementById('selectCentro');
+        var universidadesList = document.querySelector('.Unilist');
+        var institutosList = document.querySelector('.Instlist');
+
+        tipoCentro.addEventListener('change', function () {
+            // Limpiar el contenido actual del datalist
+            selectCentro.innerHTML = '';
+
+            if (tipoCentro.value === 'universidad') {
+            // Mostrar opciones de universidades y ocultar opciones de institutos
+            selectCentro.setAttribute('list', 'Unilist');
+            } else if (tipoCentro.value === 'instituto') {
+            // Mostrar opciones de institutos y ocultar opciones de universidades
+            selectCentro.setAttribute('list', 'Instlist');
+            }
+            });
+
+            // Habilitar la edición directa en el cuadro de texto
+            selectCentro.addEventListener('input', function () {
+            // Aquí puedes realizar cualquier acción adicional si es necesario
+            console.log('Input en el cuadro de texto:', selectCentro.value);
+        });
+
+        var correoUsuario = document.getElementById('correoUsuario');
+        var selectDominio = document.getElementById('selectDominio');
+
+        correoUsuario.addEventListener('input', function () {
+            // Habilitar la edición del dominio cuando se comienza a escribir en el campo de usuario
+        selectDominio.removeAttribute('disabled');
+        });
+
+        selectDominio.addEventListener('input', function () {
+            // Deshabilitar la edición del dominio solo si el valor coincide con una opción del datalist
+        var foundOption = Array.from(selectDominio.options).find(option => option.value === selectDominio.value.trim());
+        if (foundOption) {
+            selectDominio.setAttribute('disabled', 'true');
+        } else {
+            // Si el valor no coincide con ninguna opción del datalist, permite la edición del dominio
+            selectDominio.removeAttribute('disabled');
+        }
+        });
+
+
+    </script>
+
+    
+</body>
+</html>
